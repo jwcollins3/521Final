@@ -1,0 +1,52 @@
+﻿@*referencing My Books and their recommended books*@
+@model IEnumerable<_521Final.Models.UserBook>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; //add this to everything
+}
+<script type="text/javascript" src="js\MyBooks.js""></script>
+
+<h1>My Books</h1>
+
+<div class="carousel-container" style="">
+    <div class="book">
+        <!-- book content goes here -->
+        Q
+    </div>
+    <div class="book">
+        <!-- book content goes here -->
+        Q
+    </div>
+    <div class="book">
+        <!-- book content goes here -->
+        Q
+    </div>
+    <div class="book">
+        <!-- book content goes here -->
+        Q
+    </div>
+    <div class="book">
+        <!-- book content goes here -->
+        Q
+    </div>
+    <div class="book">
+        <!-- book content goes here -->
+        Q
+    </div>
+    <!-- add more book divs as needed -->
+    <button class="next-button">Next</button>
+</div>
+
+<div class="Container" id="RecentReadsData" style="">
+    <div class="">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Name of book</div>
+        <div @*onload="RenderBookMetaData()"*@ id="BookMetaData" class="panel-body" style="position: right;">
+            @*Render Book Data Here*@
+
+            @*uncomment out the onload when the books get loaded*@
+            
+        </div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    </div>
+</div><br>

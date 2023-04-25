@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _521Final.Data;
 
@@ -11,9 +12,10 @@ using _521Final.Data;
 namespace _521Final.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230417004111_DatabaseUpdate(need to delete Reccomendaton) ")]
+    partial class DatabaseUpdateneedtodeleteReccomendaton
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +34,7 @@ namespace _521Final.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genre", (string)null);
+                    b.ToTable("Genre");
                 });
 
             modelBuilder.Entity("_521Final.Models.GenreBook", b =>
@@ -45,7 +47,7 @@ namespace _521Final.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GenreBook", (string)null);
+                    b.ToTable("GenreBook");
                 });
 
             modelBuilder.Entity("_521Final.Models.Reccomendation", b =>
@@ -58,7 +60,7 @@ namespace _521Final.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Reccomendation", (string)null);
+                    b.ToTable("Reccomendation");
                 });
 
             modelBuilder.Entity("_521Final.Models.UserBook", b =>
@@ -71,7 +73,7 @@ namespace _521Final.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserBook", (string)null);
+                    b.ToTable("UserBook");
                 });
 
             modelBuilder.Entity("Book", b =>
@@ -115,7 +117,7 @@ namespace _521Final.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Book", (string)null);
+                    b.ToTable("Book");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
